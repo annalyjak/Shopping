@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Shopping List</string>
+    <string name="title_home">Home</string>
+    <string name="title_history">History</string>
+    <string name="no_products_info">You have no products on this list… You can add products using + button.</string>
+    <string name="list_name_default_title">List name</string>
+    <string name="archive_list">Archive list</string>
+    <string name="edit_list_name">Edit list name</string>
+    <string name="delete_all">Delete all (permanent)</string>
+    <string name="info_no_archived">You have no archived shopping lists</string>
+    <string name="message_activate_list">Do you want to make this shopping list active again?</string>
+    <string name="title_activate_list">Activate shopping list</string>
+    <string name="message_delete_product">Do you want to delete this product?</string>
+    <string name="title_delete_product">Delete product</string>
+    <string name="title_change_list_name">Change list name</string>
+    <string name="new_name">New list name</string>
+    <string name="cancel">cancel</string>
+    <string name="ok">ok</string>
+</resources>
