@@ -1,7 +1,8 @@
 package com.alyjak.shopping.database.model
 
-import androidx.room.*
-import androidx.room.ForeignKey.CASCADE
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "product_table")
 data class Product (

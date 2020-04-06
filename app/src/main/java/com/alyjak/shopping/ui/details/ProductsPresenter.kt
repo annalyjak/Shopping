@@ -15,7 +15,7 @@ class ProductsPresenter(private val view: ProductsActivity) : BasePresenter(view
     private val productDao = ShoppingListDatabase.getInstance(view.application).productDao
 
     var shoppingListId: Long = -1L
-    var shoppingListWithProducts = MutableLiveData<ShoppingListWithProducts>()
+    private var shoppingListWithProducts = MutableLiveData<ShoppingListWithProducts>()
     var products = MutableLiveData<List<Product>>()
     var selectedProduct: Product? = null
 
@@ -25,7 +25,7 @@ class ProductsPresenter(private val view: ProductsActivity) : BasePresenter(view
 
     fun showListDetails() {
         coroutineContext.launch {
-            var list = shoppingListDao.getShoppingListWithProducts(shoppingListId)
+            val list = shoppingListDao.getShoppingListWithProducts(shoppingListId)
             withContext(Dispatchers.Main) {
                 shoppingListWithProducts.value = list
                 if (list != null) {

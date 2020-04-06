@@ -16,7 +16,7 @@ class MainPresenter(private val view: MainActivity) : BasePresenter(view) {
 
     fun updateShoppingList() {
         coroutineContext.launch {
-            var shoppingList = selectedItem?.shoppingList
+            val shoppingList = selectedItem?.shoppingList
             shoppingList?.archived = false
             shoppingList?.let { shoppingListDao.update(it) }
             withContext(Dispatchers.Main) {

@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity(),
     ShoppingListsFragment.OnShoppingListFragmentInteractionListener,
     HistoryFragment.OnHistoryListFragmentInteractionListener {
 
-    lateinit var presenter: MainPresenter
+    private lateinit var presenter: MainPresenter
 
     var selectedFragment: Fragment? = null
 
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(),
             val selectedFragmentName = selectedFragment!!::class.java.simpleName
             outState.putString(SELECTED_FRAGMENT, selectedFragmentName)
         }
-        var selectedId = presenter.selectedItem?.shoppingList?.listId
+        val selectedId = presenter.selectedItem?.shoppingList?.listId
         if (selectedId != null) {
             outState.putLong(SELECTED_ITEM, selectedId)
         }

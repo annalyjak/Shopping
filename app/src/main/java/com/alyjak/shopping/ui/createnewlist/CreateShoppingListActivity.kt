@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_create_shopping_list.*
 
 class CreateShoppingListActivity : AppCompatActivity(), BaseView {
 
-    lateinit var presenter: CreateShoppingListPresenter
+    private lateinit var presenter: CreateShoppingListPresenter
 
     companion object {
         const val SELECTED_NAME = "SELECTED_NAME"

@@ -18,13 +18,13 @@ class DeleteProductDialogFragment : DialogFragment() {
             .setMessage(getString(R.string.message_delete_product))
             .setPositiveButton(
                 android.R.string.yes
-            ) { dialog: DialogInterface, which: Int ->
+            ) { dialog: DialogInterface, _: Int ->
                 (activity as DeleteProductDialogFragmentListener?)!!.onYesDeleteProduct()
                 dialog.cancel()
             }
             .setNegativeButton(
                 android.R.string.no
-            ) { dialog: DialogInterface, which: Int -> dialog.cancel() }
+            ) { dialog: DialogInterface, _: Int -> dialog.cancel() }
             .create()
     }
 }

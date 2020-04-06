@@ -28,7 +28,7 @@ class ProductsRecyclerViewAdapter(
 
     override fun getItemCount(): Int = mValues.size
 
-    inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
+    inner class ViewHolder(private val mView: View) : RecyclerView.ViewHolder(mView) {
 
         @SuppressLint("SetTextI18n")
         fun bind(item: Product) {

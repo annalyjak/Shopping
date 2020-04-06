@@ -17,7 +17,7 @@ class HistoryFragment : Fragment(), BaseView {
 
     private var listener: OnHistoryListFragmentInteractionListener? = null
 
-    lateinit var presenter: HistoryPresenter
+    private lateinit var presenter: HistoryPresenter
     lateinit var historyRecyclerViewAdapter: HistoryRecyclerViewAdapter
 
     val ITEMS: MutableList<ShoppingListWithProducts> = ArrayList()
@@ -64,7 +64,7 @@ class HistoryFragment : Fragment(), BaseView {
         if (context is OnHistoryListFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnListFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnListFragmentInteractionListener")
         }
     }
 

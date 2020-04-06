@@ -1,8 +1,8 @@
 package com.alyjak.shopping.ui.details
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.Dialog
-import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import com.alyjak.shopping.R
@@ -14,6 +14,7 @@ class EditListNameDialogFragment : DialogFragment() {
         fun onYesChangeName(newName: String)
     }
 
+    @SuppressLint("InflateParams")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val view = activity?.layoutInflater?.inflate(R.layout.layout_change_list_name, null)
         val alert = AlertDialog.Builder(activity)

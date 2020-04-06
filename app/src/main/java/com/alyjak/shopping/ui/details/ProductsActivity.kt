@@ -67,7 +67,7 @@ class ProductsActivity : AppCompatActivity(), BaseView,
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        var selectedId = presenter.selectedProduct?.productId
+        val selectedId = presenter.selectedProduct?.productId
         if (selectedId != null) {
             outState.putLong(SELECTED_PRODUCT_ITEM, selectedId)
         }

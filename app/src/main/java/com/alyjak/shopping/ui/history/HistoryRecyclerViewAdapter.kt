@@ -52,9 +52,9 @@ class HistoryRecyclerViewAdapter(
             mView.date.text = "(${item.shoppingList.timeOfCreation.formatDateToString()})"
             val products = item.products.size
             if (products == 1) {
-                mView.content.text = "${products} item"
+                mView.content.text = "$products item"
             } else {
-                mView.content.text = "${products} items"
+                mView.content.text = "$products items"
             }
         }
 

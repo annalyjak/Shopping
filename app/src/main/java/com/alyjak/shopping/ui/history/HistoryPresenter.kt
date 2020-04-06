@@ -6,8 +6,8 @@ import kotlinx.coroutines.*
 
 class HistoryPresenter(private val view: HistoryFragment): BasePresenter(view) {
 
-    val dataSource = view.activity?.application?.let { ShoppingListDatabase.getInstance(it).shoppingListDao }
-    val productDao = view.activity?.application?.let { ShoppingListDatabase.getInstance(it).productDao }
+    private val dataSource = view.activity?.application?.let { ShoppingListDatabase.getInstance(it).shoppingListDao }
+    private val productDao = view.activity?.application?.let { ShoppingListDatabase.getInstance(it).productDao }
 
     fun getAllArchivedList() {
         coroutineContext.launch {
@@ -16,7 +16,7 @@ class HistoryPresenter(private val view: HistoryFragment): BasePresenter(view) {
     }
 
     private suspend fun getList() {
-        var allActiveShoppingList = dataSource?.getAllArchiveShoppingList()
+        val allActiveShoppingList = dataSource?.getAllArchiveShoppingList()
         withContext(Dispatchers.Main) {
             view.ITEMS.clear()
             if (allActiveShoppingList != null) {
@@ -33,7 +33,7 @@ class HistoryPresenter(private val view: HistoryFragment): BasePresenter(view) {
 
     fun deleteAllArchived() {
         coroutineContext.launch {
-            var allActiveShoppingList = dataSource?.getAllArchiveShoppingList()
+            val allActiveShoppingList = dataSource?.getAllArchiveShoppingList()
             allActiveShoppingList?.forEach {
                 productDao?.delete(it.products)
                 dataSource?.delete(it.shoppingList)

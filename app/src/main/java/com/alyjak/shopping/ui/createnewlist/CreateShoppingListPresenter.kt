@@ -7,7 +7,7 @@ import kotlinx.coroutines.*
 
 class CreateShoppingListPresenter(private val view: CreateShoppingListActivity) : BasePresenter(view) {
 
-    val dataSource = ShoppingListDatabase.getInstance(view.application).shoppingListDao
+    private val dataSource = ShoppingListDatabase.getInstance(view.application).shoppingListDao
 
     fun performOkButtonClick(newListName: String) {
         if (newListName.isBlank()) {

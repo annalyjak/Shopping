@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_new_product.*
 
 class NewProductActivity : AppCompatActivity(), BaseView {
 
-    lateinit var presenter: NewProductPresenter
+    private lateinit var presenter: NewProductPresenter
 
     companion object {
         const val SELECTED_NAME = "SELECTED_NAME"

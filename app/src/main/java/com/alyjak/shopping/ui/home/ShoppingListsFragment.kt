@@ -82,7 +82,7 @@ class ShoppingListsFragment : Fragment(), BaseView {
         if (context is OnShoppingListFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnListFragmentInteractionListener")
+            throw RuntimeException("$context must implement OnListFragmentInteractionListener")
         }
     }
 
