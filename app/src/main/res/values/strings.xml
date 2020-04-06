@@ -14,6 +14,5 @@
     <string name="title_delete_product">Delete product</string>
     <string name="title_change_list_name">Change list name</string>
     <string name="new_name">New list name</string>
-    <string name="cancel">cancel</string>
-    <string name="ok">ok</string>
+    <string name="info_no_shopping_list">You have no shopping list… You can create it using + button.</string>
 </resources>

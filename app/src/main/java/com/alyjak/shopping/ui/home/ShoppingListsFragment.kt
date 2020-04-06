@@ -14,6 +14,7 @@ import com.alyjak.shopping.R
 import com.alyjak.shopping.ui.base.BaseView
 import com.alyjak.shopping.database.model.ShoppingListWithProducts
 import com.alyjak.shopping.ui.createnewlist.CreateShoppingListActivity
+import kotlinx.android.synthetic.main.fragment_shoppinglist_list.*
 import kotlinx.android.synthetic.main.fragment_shoppinglist_list.view.*
 import java.util.*
 
@@ -92,6 +93,16 @@ class ShoppingListsFragment : Fragment(), BaseView {
 
     interface OnShoppingListFragmentInteractionListener {
         fun onShoppingListFragmentInteraction(item: ShoppingListWithProducts?)
+    }
+
+    fun showNoShoppingListLayout() {
+        noShoppingListLayout.visibility = View.VISIBLE
+        list.visibility = View.INVISIBLE
+    }
+
+    fun hideNoShoppingListLayout() {
+        list.visibility = View.VISIBLE
+        noShoppingListLayout.visibility = View.INVISIBLE
     }
 
     companion object {
